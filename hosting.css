@@ -1,0 +1,94 @@
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #007bff, #00b4d8);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    h2 {
+      color: #007bff;
+      margin-top: 0;
+    }
+    p {
+      line-height: 1.8;
+      font-size: 18px;
+      text-align: justify;
+    }
+    ul {
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+    li {
+      font-size: 17px;
+    }
+    .gambar {
+      text-align: center;
+      margin: 40px 0;
+    }
+    img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .caption {
+      font-size: 14px;
+      color: #666;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }

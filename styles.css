@@ -1,0 +1,69 @@
+:root{
+  --bg:#f4f8ff;
+  --card:#fff;
+  --muted:#6b7280;
+  --accent:#0b76ff;
+  --accent-2:#0066cc;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:#071826;margin:0}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+.topbar{background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.6));backdrop-filter:blur(6px);position:sticky;top:0;z-index:40}
+.header-row{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;text-decoration:none;color:inherit}
+.logo{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#6ad0ff);border-radius:10px;color:white;display:flex;align-items:center;justify-content:center;font-weight:800}
+.brand-name{font-weight:800;margin-left:10px}
+.main-nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:700}
+.btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:800}
+.btn-outline{padding:8px 12px;border-radius:8px;border:1px solid rgba(11,118,255,0.12);text-decoration:none;color:var(--muted)}
+.theme-btn{background:transparent;border:0;font-size:18px;cursor:pointer}
+
+/* Hero */
+.hero{display:flex;gap:20px;align-items:flex-start;margin-top:18px}
+.hero-left{flex:1}
+.hero-right{width:320px}
+.lead{color:var(--muted)}
+.search-card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 10px 30px rgba(3,10,40,0.05)}
+.search-form .row{display:flex;gap:8px;margin-bottom:8px}
+.search-form input,.search-form select{flex:1;padding:10px;border-radius:8px;border:1px solid #eef6ff}
+.search-results{margin-top:10px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.card{background:var(--card);border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.card img{width:100%;height:120px;object-fit:cover}
+.card div{padding:10px}
+
+/* countries */
+.container-section{margin-top:26px}
+.country-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.country-card{display:block;background:var(--card);border-radius:10px;overflow:hidden;text-decoration:none;color:inherit}
+.country-card img{width:100%;height:120px;object-fit:cover}
+.country-card div{padding:10px}
+
+/* stories */
+.story-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.story.card{display:flex;gap:12px;padding:0;border-radius:10px;overflow:hidden}
+.story.card img{width:40%;height:150px;object-fit:cover}
+.story-content{padding:12px}
+
+/* booking */
+.booking-form{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.booking-form input,.booking-form select{padding:10px;border-radius:8px;border:1px solid #eef6ff;flex:1}
+
+/* small components */
+.promo img{width:100%;height:120px;object-fit:cover;border-radius:8px;margin-top:8px}
+.tips.card{padding:12px}
+.search-results .flight-card{background:var(--card);padding:10px;border-radius:8px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.small{font-size:13px;color:var(--muted)}
+.site-footer{margin-top:28px;padding:12px;text-align:center;color:var(--muted)}
+
+/* dark theme */
+.theme-dark{background:#071024;color:#dceeff}
+.theme-dark .topbar{background:linear-gradient(180deg,rgba(7,16,36,0.95),rgba(7,16,36,0.85))}
+.theme-dark .card,.theme-dark .search-card,.theme-dark .country-card{background:#0b2636;color:#e8f6ff}
+.theme-dark .btn-primary{background:#1f7bff}
+.theme-dark .main-nav a{color:#cfe6ff}
+
+/* responsive */
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)} .country-grid{grid-template-columns:repeat(2,1fr)} .hero{flex-direction:column} .hero-right{width:100%}}
+@media (max-width:520px){.cards{grid-template-columns:1fr} .story-grid{grid-template-columns:1fr} .main-nav{display:none}}

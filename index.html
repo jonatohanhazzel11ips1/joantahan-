@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EuroBuddy — Teman Wisata ke Eropa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container header-row">
+      <a class="brand" href="index.html"><div class="logo">EB</div><div class="brand-name">EuroBuddy</div></a>
+      <nav class="main-nav" role="navigation">
+        <a href="#home">Home</a>
+        <a href="#countries">Countries</a>
+        <a href="#stories">Stories</a>
+        <a href="#booking" class="btn-primary">Booking</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <h1>Rencanakan perjalanan Eropa-mu — Bandingkan tiket & paket</h1>
+        <p class="lead">Cari tiket pesawat, paket wisata, dan baca cerita perjalanan — semua di satu tempat. (Demo HTML + CSS)</p>
+
+        <div class="search-card">
+          <form id="flightSearchTop" class="search-form">
+            <div class="row">
+              <input name="from" id="fromTop" placeholder="Kota keberangkatan (contoh: Jakarta)" required>
+              <input name="to" id="toTop" placeholder="Tujuan (contoh: Paris / France)" required>
+            </div>
+            <div class="row">
+              <input type="date" name="date" id="dateTop" required>
+              <select id="cabinTop" name="cabin"><option>Economy</option><option>Business</option></select>
+            </div>
+            <div class="row">
+              <button type="submit" class="btn-primary">Cari Penerbangan</button>
+              <a href="#countries" class="btn-outline">Lihat Negara</a>
+            </div>
+          </form>
+          <div id="topSearchResults" class="search-results small">Hasil pencarian demo akan muncul di sini.</div>
+        </div>
+
+        <section class="popular">
+          <h3>Destinasi Populer</h3>
+          <div class="cards">
+            <a class="card" href="countries/france.html"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=60" alt="France"><div><h4>France</h4><p class="small">Paris, Bordeaux, Alps</p></div></a>
+            <a class="card" href="countries/italy.html"><img src="rome,italy.jpg" alt="Italy"><div><h4>Italy</h4><p class="small">Rome, Venice, Tuscany</p></div></a>
+            <a class="card" href="countries/greece.html"><img src="Greece.webp" alt="Greece"><div><h4>Greece</h4><p class="small">Santorini, Athens</p></div></a>
+            <a class="card" href="countries/netherlands.html"><img src="amsterdam, netherland.jpg" alt="Netherlands"><div><h4>Netherlands</h4><p class="small">Amsterdam, Tulip</p></div></a>
+          </div>
+        </section>
+      </div>
+
+      <aside class="hero-right">
+        <div class="promo card">
+          <h4>Paket Spesial: 7 Hari Eropa</h4>
+          <p class="small">Demo paket: penerbangan + hotel + city tour. Harga estimasi akan tampil saat pencarian.</p>
+          <img src="oslo, norwegia.avif" alt="promo">
+          <a href="#booking" class="btn-primary">Pesan Sekarang</a>
+        </div>
+
+        <div class="tips card">
+          <h4>Tips Singkat</h4>
+          <ul class="small">
+            <li>Cek syarat visa & asuransi perjalanan.</li>
+            <li>Pesan tiket atraksi secara online untuk menghindari antrean.</li>
+            <li>Gunakan city pass untuk menghemat biaya masuk atraksi.</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section id="countries" class="container-section">
+      <h2>Semua Negara Eropa</h2>
+      <p class="small">Klik tiap negara untuk membuka halaman khususnya (contoh: keunikan, keindahan, dan contoh harga tiket pesawat).</p>
+
+      <div class="country-grid">
+        <!-- 44 negara — contoh beberapa, sisanya bisa dibuat mirip -->
+        <a class="country-card" href="countries/france.html"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=60" alt="France"><div><h4>France</h4><p class="small">Paris & more</p></div></a>
+        <a class="country-card" href="countries/italy.html"><img src="rome,italy.jpg" alt="Italy"><div><h4>Italy</h4><p class="small">Rome, Venice</p></div></a>
+        <a class="country-card" href="countries/greece.html"><img src="Greece.webp" alt="Greece"><div><h4>Greece</h4><p class="small">Santorini</p></div></a>
+        <a class="country-card" href="countries/switzerland.html"><img src="switzerland.avif" alt="Switzerland"><div><h4>Switzerland</h4><p class="small">Alps & lakes</p></div></a>
+
+        <!-- Jika ingin: tambahkan link untuk semua 44 negara (lihat generator di canvas) -->
+      </div>
+    </section>
+
+    <section id="stories" class="container-section">
+      <h2>Stories — Cerita Perjalanan</h2>
+      <div class="story-grid">
+        <article class="story card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=60" alt="roadtrip">
+          <div class="story-content">
+            <h4>Roadtrip 10 Hari: Paris → Lyon → Geneva</h4>
+            <p class="small">Pengalaman roadtrip, tips budget, dan rekomendasi makan lokal.</p>
+          </div>
+        </article>
+
+        <article class="story card">
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=60" alt="backpacking">
+          <div class="story-content">
+            <h4>Backpacking Murah di Eropa Timur</h4>
+            <p class="small">Rute hemat, hostel recommended, dan cara memanfaatkan kereta malam.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="booking" class="container-section">
+      <h2>Booking — Cari dan Pesan (Demo)</h2>
+      <form id="flightForm" class="booking-form">
+        <input name="from" id="from" placeholder="Kota Keberangkatan (contoh: Jakarta)" required>
+        <input name="to" id="to" placeholder="Kota Tujuan / Negara (contoh: Paris)" required>
+        <input name="date" id="date" type="date" required>
+        <select id="fclass" name="class"><option>Economy</option><option>Business</option></select>
+        <button class="btn-primary" type="submit">Cari Penerbangan</button>
+      </form>
+
+      <div id="searchFlightsResult" class="search-results small">Hasil pencarian akan muncul di sini (demo menggunakan backend mock).</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 EuroBuddy — Demo mirip Traveloka / Tiket.com — HTML & CSS murni</div>
+  </footer>
+
+  <script>
+    // Minimal JS: theme toggle + demo handlers (tidak butuh backend untuk tampilan)
+    (function(){
+      const toggle = document.getElementById('themeToggle');
+      toggle.addEventListener('click', ()=> {
+        document.body.classList.toggle('theme-dark');
+        toggle.textContent = document.body.classList.contains('theme-dark') ? '☀️' : '🌙';
+      });
+
+      // Demo flight search (fake) — mengganti dengan real backend bila ada
+      function fakeSearch(from,to,date){
+        return [
+          {id:'F1', airline:'Air Europe', route: from + ' → ' + to, price:'€650'},
+          {id:'F2', airline:'KLM', route: from + ' → ' + to, price:'€680'},
+          {id:'F3', airline:'Lufthansa', route: from + ' → ' + to, price:'€700'},
+        ];
+      }
+
+      document.getElementById('flightForm').addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const from = document.getElementById('from').value;
+        const to = document.getElementById('to').value;
+        const date = document.getElementById('date').value;
+        const res = fakeSearch(from,to,date);
+        const out = res.map(f=>`<div class="flight-card"><strong>${f.airline}</strong> — ${f.route} — <em>${f.price}</em> <a class="btn-outline" href="#">Book</a></div>`).join('');
+        document.getElementById('searchFlightsResult').innerHTML = out;
+      });
+
+      // top search (hero)
+      document.getElementById('flightSearchTop').addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const from = document.getElementById('fromTop').value;
+        const to = document.getElementById('toTop').value;
+        const date = document.getElementById('dateTop').value;
+        const res = fakeSearch(from,to,date);
+        document.getElementById('topSearchResults').innerHTML = res.map(f=>`<div class="flight-card"><strong>${f.airline}</strong> — ${f.route} — <em>${f.price}</em> <a class="btn-outline" href="#">Book</a></div>`).join('');
+      });
+    })();
+  </script>
+</body>
+</html>
